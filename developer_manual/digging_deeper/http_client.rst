@@ -7,7 +7,7 @@ Nextcloud comes with a simple HTTP client that can be used to send requests to o
 Acquiring a HTTP Client
 -----------------------
 
-HTTP client instances are built using the client service `factory <https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>`_ ``IClientService``. 
+HTTP client instances are built using the client service `factory <https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>`_ ``IClientService``. The factory can be :ref:`injected<dependency-injection>` into any app class:
 
 .. code-block:: php
 
