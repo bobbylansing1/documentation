@@ -161,6 +161,29 @@ Calendars that only return `ICalendar` are implicitly read-only. If your app's c
 
     }
 
+Handling iMIP data 
+~~~~~~~~~~~~~
+
+If you would like to process iMIP data, you may implement the ``handleIMipMessage`` method:
+
+.. code-block:: php
+
+    <?php
+
+    use OCP\Calendar\ICreateFromString;
+
+    class CalendarImipHandler implements ICreateFromString {
+
+        // ... other methods from ICalendar still have to be implemented ...
+
+        public function handleIMipMessage(string $name, string $calendarData): void {
+            // Validation and write to your calendar representation
+        }
+
+    }
+
+You can find more infomation on the conditions that have to be fulfilled for iMIP data to be processed in the `RFC <https://www.rfc-editor.org/rfc/rfc6047>`_
+
 Resources
 ---------
 
